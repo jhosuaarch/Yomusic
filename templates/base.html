@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static',filename='img/music.png')}}">
+    <link rel="shortcut icon" type="image/jpg" href="{{ url_for('static',filename='img/music.png')}}"/>
+    <!-- Icon -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+
+    <title>Yomusic</title>
+
+  </head>
+  <body>
+   {% block body %}{% endblock %}
+   <footer>
+    <div class="containers">
+      <span>Copyright &copy; <script> document.write(new Date().getFullYear()); </script> - developed by
+        <b><a href="https://github.com/KZREVOXTICAL/" target="_blank">Jhosua</a></b>
+      </span>
+    </div>
+    </footer>
+    <script src="{{url_for('static',filename='js/bootstrap.js')}}"></script>
+    <script src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
+  </body>
+</html>

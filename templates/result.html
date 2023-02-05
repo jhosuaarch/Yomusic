@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<div class="container py-5 justify-content-center">
+    <div class="row mb-3 justify-content-center">
+        {% for musik in data %}
+        <div class="col-md-6 mb-4">
+            <div class="card glass h-100">
+              <div class="card-body">
+                <div class="row align-items-center">
+                  <div class="col mr-2">
+                    <div class="text-xs font-weight-bold text-light text-uppercase mb-1">{{ musik.title }}</div>
+                    <div class="mt-2 mb-2 text-muted text-xs text-light">Duration {{ musik.duration }}</div>
+                    <form action="{{ url_for('download') }}" method="POST">
+                      <input type="hidden" name="dmusic" value="{{musik.link}}">
+                      <input type="hidden" name="judul" value="{{musik.title}}">
+                      <a href="{{musik.link}}" target="_blank"><button class="watch-view" type="button"><ion-icon name="eye-outline"></ion-icon></button></a>
+                      <button class="download-btn" type="submit"><ion-icon name="download-outline"></ion-icon></button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

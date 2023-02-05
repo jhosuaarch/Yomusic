@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div class="container py-5 text-center">
+    <h2 class="write"><b>Yo<span class="music">music</span></b>
+    </h2>
+    <div class="row">
+        <div class="col-lg-8 offset-lg-2 text-center">
+            <div class="search-form">
+                <form method="POST">
+                    <input type="text" name="query" placeholder="Masukkan judul musik" required="1" autocomplete="off">
+                    <button type="submit"><ion-icon name="search-outline"></ion-icon></button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
